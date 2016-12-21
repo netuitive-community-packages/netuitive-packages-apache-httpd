@@ -14,28 +14,38 @@
     "metrics" : [ {
       "match" : "httpd\\..*\\.TotalAccesses",
       "properties" : {
-        "type" : "COUNTER",
-        "unit" : "count"
+        "tags" : {
+          "unit" : "count"
+        },
+        "type" : "COUNTER"
       }
     }, {
       "match" : "httpd\\..*Workers",
       "properties" : {
-        "unit" : "count"
+        "tags" : {
+          "unit" : "count"
+        }
       }
     }, {
       "match" : "httpd\\..*BytesPerReq",
       "properties" : {
-        "unit" : "bytes"
+        "tags" : {
+          "unit" : "bytes"
+        }
       }
     }, {
       "match" : "httpd\\..*BytesPerSec",
       "properties" : {
-        "unit" : "Bps"
+        "tags" : {
+          "unit" : "Bps"
+        }
       }
     }, {
       "match" : "httpd\\..*ReqPerSec",
       "properties" : {
-        "unit" : "ops"
+        "tags" : {
+          "unit" : "ops"
+        }
       }
     } ]
   }
