@@ -1,0 +1,42 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Apache HTTPD",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "SERVER",
+      "elementTags" : null,
+      "metricMatches" : "^httpd.*"
+    },
+    "metrics" : [ {
+      "match" : "httpd\\..*\\.TotalAccesses",
+      "properties" : {
+        "type" : "COUNTER",
+        "unit" : "count"
+      }
+    }, {
+      "match" : "httpd\\..*Workers",
+      "properties" : {
+        "unit" : "count"
+      }
+    }, {
+      "match" : "httpd\\..*BytesPerReq",
+      "properties" : {
+        "unit" : "bytes"
+      }
+    }, {
+      "match" : "httpd\\..*BytesPerSec",
+      "properties" : {
+        "unit" : "Bps"
+      }
+    }, {
+      "match" : "httpd\\..*ReqPerSec",
+      "properties" : {
+        "unit" : "ops"
+      }
+    } ]
+  }
+}
