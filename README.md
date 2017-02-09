@@ -1,6 +1,6 @@
 #netuitive.packages.apache.httpd 1.0.0
 
-For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Datasources/Netuitive/httpd.htm).
+For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/httpd.htm).
 
 ##Release History
 
