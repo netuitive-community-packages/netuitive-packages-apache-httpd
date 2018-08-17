@@ -1,52 +1,53 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Apache HTTPD",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^httpd.*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "httpd\\..*\\.TotalAccesses",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          },
+          "type": "COUNTER"
+        }
+      },
+      {
+        "match": "httpd\\..*Workers",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "httpd\\..*BytesPerReq",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "httpd\\..*BytesPerSec",
+        "properties": {
+          "tags": {
+            "unit": "Bps"
+          }
+        }
+      },
+      {
+        "match": "httpd\\..*ReqPerSec",
+        "properties": {
+          "tags": {
+            "unit": "ops"
+          }
+        }
+      }
+    ],
+    "name": "Apache HTTPD",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^httpd.*"
     },
-    "metrics" : [ {
-      "match" : "httpd\\..*\\.TotalAccesses",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        },
-        "type" : "COUNTER"
-      }
-    }, {
-      "match" : "httpd\\..*Workers",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "httpd\\..*BytesPerReq",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "httpd\\..*BytesPerSec",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    }, {
-      "match" : "httpd\\..*ReqPerSec",
-      "properties" : {
-        "tags" : {
-          "unit" : "ops"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }
