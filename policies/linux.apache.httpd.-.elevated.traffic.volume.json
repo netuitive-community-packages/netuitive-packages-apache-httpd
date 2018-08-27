@@ -17,6 +17,9 @@
     "description": "The number of requests per second has been higher than expected for at least the past 30 minutes.",
     "duration": 1800,
     "enabled": true,
-    "name": "Linux Apache HTTPD - Elevated Traffic Volume"
+    "name": "Linux Apache HTTPD - Elevated Traffic Volume",
+    "scope": {
+      "elementType": "SERVER"
+    }
   }
 }
